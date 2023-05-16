@@ -13,21 +13,24 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Informe o seu peso"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="100dp" />
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="180dp"
         android:layout_height="51dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Informe a sua altura"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        tools:layout_editor_absoluteX="160dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="99dp"
         android:layout_height="38dp"
         android:text="App IMC"
@@ -42,7 +45,7 @@
         android:id="@+id/button"
         android:layout_width="302dp"
         android:layout_height="53dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="68dp"
         android:text="Calcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -53,18 +56,29 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
         android:text="Seu resultado"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="201dp"
-        tools:layout_editor_absoluteY="345dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="416dp"
         android:layout_height="272dp"
         android:src="@drawable/istockphoto_1340444051_612x612"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="415dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powered Samuel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
