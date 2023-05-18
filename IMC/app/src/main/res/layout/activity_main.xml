@@ -16,7 +16,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Informe a sua altura"
+        android:hint="@string/text_hint_edit_Altura"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Informe o seu peso"
+        android:hint="@string/text_hint_edit_Peso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +83,8 @@
         android:layout_height="54dp"
         android:background="#3F51B5"
         tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView4"

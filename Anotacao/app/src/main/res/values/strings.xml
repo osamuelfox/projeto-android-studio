@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Anotacao</string>
+    <string name="text_hint_edit_tituloNota">TituloNota</string>
+    <string name="text_hint_edit_Texto">Texto</string>
+    <string name="text_hint_edit_titulo">"Titulo "</string>
+    <string name="text_anotacoes">Anotacões</string>
+    <string name="salvar">Salvar</string>
+    <string name="editar">Editar</string>
+    <string name="excluir">Excluir</string>
+    <string name="todo">TODO</string>
 </resources>

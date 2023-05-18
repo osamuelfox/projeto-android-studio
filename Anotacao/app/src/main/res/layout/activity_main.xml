@@ -7,11 +7,14 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="331dp"
-        android:layout_height="196dp"
-        android:background="#A6DFA8"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="124dp">
+        android:layout_width="324dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="48dp"
+        android:background="#63A6DFA8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <EditText
             android:id="@+id/editTextTextPersonName"
@@ -19,8 +22,8 @@
             android:layout_height="63dp"
             android:layout_marginTop="16dp"
             android:ems="10"
+            android:hint="@string/text_hint_edit_tituloNota"
             android:inputType="textPersonName"
-            android:text="Titulo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +35,7 @@
             android:layout_height="85dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Texto"
+            android:hint="@string/text_hint_edit_Texto"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +49,8 @@
         android:layout_height="62dp"
         android:background="#4CAF50"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
@@ -61,7 +65,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Anotacões"
+            android:text="@string/text_anotacoes"
             android:textColor="#EFEFEF"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -85,7 +89,8 @@
         app:layout_constraintEnd_toStartOf="@+id/floatingActionButton5"
         app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toEndOf="@+id/floatingActionButton2"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        android:contentDescription="@string/todo" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton5"
@@ -97,7 +102,8 @@
         app:backgroundTint="#4CAF50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_delete" />
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        android:contentDescription="TODO" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton2"
@@ -121,7 +127,8 @@
         app:backgroundTint="#A6DFA8"
         app:srcCompat="@android:drawable/ic_lock_idle_alarm"
         tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="499dp" />
+        tools:layout_editor_absoluteY="499dp"
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton3"
@@ -131,7 +138,8 @@
         app:backgroundTint="#A6DFA8"
         app:srcCompat="@android:drawable/ic_menu_gallery"
         tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="374dp" />
+        tools:layout_editor_absoluteY="374dp"
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton6"
@@ -141,7 +149,8 @@
         app:backgroundTint="#A6DFA8"
         app:srcCompat="@android:drawable/ic_menu_agenda"
         tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="430dp" />
+        tools:layout_editor_absoluteY="430dp"
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton8"
@@ -159,24 +168,27 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Salvar"
+        android:text="@string/salvar"
         app:layout_constraintTop_toBottomOf="@+id/floatingActionButton2"
-        tools:layout_editor_absoluteX="62dp" />
+        tools:layout_editor_absoluteX="62dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Editar"
+        android:text="@string/editar"
         app:layout_constraintTop_toBottomOf="@+id/floatingActionButton4"
-        tools:layout_editor_absoluteX="187dp" />
+        tools:layout_editor_absoluteX="187dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="49dp"
         android:layout_height="20dp"
-        android:text="Excluir"
+        android:text="@string/excluir"
         app:layout_constraintTop_toBottomOf="@+id/floatingActionButton5"
-        tools:layout_editor_absoluteX="314dp" />
+        tools:layout_editor_absoluteX="314dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
