@@ -1,4 +1,4 @@
-package com.example.imc.view;
+package com.example.gerenciadordetarefa.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,60 +7,56 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.imc.R;
-import com.example.imc.controller.ImcContoller;
-import com.example.imc.model.Calculadora;
+import com.example.gerenciadordetarefa.R;
+import com.example.gerenciadordetarefa.controller.GerenciadorController;
+import com.example.gerenciadordetarefa.model.Gerenciador;
 
 public class MainActivity extends AppCompatActivity {
 
-    Calculadora calculadora;
-    Calculadora outraCalculadora;
+    Gerenciador gerenciador;
+    Gerenciador outroGerenciador;
 
-    ImcContoller controller;
+    GerenciadorController controller;
 
-    EditText edit_Peso;
-    EditText edit_Altura;
-    TextView text_Resultado;
-
-
+    EditText editTitulo;
+    EditText editDescricao;
+    EditText editHora;
 
     Button btnbuton_Limpar;
     Button btnbuton_Salvar;
     Button btnbuton_Finalizar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        controller = new ImcContoller(MainActivity.this);
-        controller.toString();
+        controller = new GerenciadorController(MainActivity.this);
 
-        outraCalculadora = new Calculadora();
-        controller.buscar(outraCalculadora);
+        outroGerenciador = new Gerenciador();
+        controller.buscar(outroGerenciador);
 
-        edit_Peso = findViewById(R.id.editPeso);
-        edit_Altura = findViewById(R.id.editAltura);
-        text_Resultado = findViewById(R.id.textResultado);
+        editTitulo = findViewById(R.id.text_titulo);
+        editDescricao = findViewById(R.id.text_descricao);
+        editHora = findViewById(R.id.text_time);
 
         btnbuton_Limpar = findViewById(R.id.button_Limpar);
         btnbuton_Salvar = findViewById(R.id.button_Salvar);
         btnbuton_Finalizar = findViewById(R.id.button_Finalizar);
 
-        edit_Peso.setText(outraCalculadora.getPeso());
-        edit_Altura.setText(outraCalculadora.getAltura());
-        text_Resultado.setText(outraCalculadora.getResultado());
+        editTitulo.setText(outroGerenciador.getTitulo());
+        editDescricao.setText(outroGerenciador.getDescricao());
+        editHora.setText(outroGerenciador.getHora());
 
         btnbuton_Limpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edit_Peso.setText("");
-                edit_Altura.setText("");
-
+                editTitulo.setText("");
+                editDescricao.setText("");
+                editHora.setText("");
+                controller.limpar();
             }
         });
 
@@ -76,20 +72,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                outraCalculadora.setPeso(edit_Peso.getText().toString());
-                outraCalculadora.setAltura(edit_Altura.getText().toString());
-
+                outroGerenciador.setTitulo(editTitulo.getText().toString());
+                outroGerenciador.setDescricao(editDescricao.getText().toString());
+                outroGerenciador.setHora(editHora.getText().toString());
 
                 Toast.makeText(MainActivity.this, " Salvo ", Toast.LENGTH_SHORT).show();
-                controller.salvar(outraCalculadora);
-
+                controller.salvar(outroGerenciador);
             }
         });
 
-
-
-        Log.i("ProgramacaoPOO", outraCalculadora.toString());
-
     }
-
 }
