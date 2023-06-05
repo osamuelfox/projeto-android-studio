@@ -45,6 +45,16 @@
         android:textStyle="bold" />
 
     <Button
+        android:id="@+id/button_Calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="30dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
         android:id="@+id/button_Finalizar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,25 +66,26 @@
 
     <Button
         android:id="@+id/button_Salvar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="30dp"
         android:text="Salvar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="16dp" />
+
 
     <Button
         android:id="@+id/button_Limpar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="30dp"
         android:text="Limpar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="16dp" />
+
+
 
 
 </LinearLayout>
