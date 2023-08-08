@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
     EditText edit_Altura;
     TextView text_Resultado;
 
-
-
     Button btnbuton_Limpar;
     Button btnbuton_Salvar;
     Button btnbuton_Finalizar;
+
+    Button btn_calcular;
 
 
     @Override
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btnbuton_Limpar = findViewById(R.id.button_Limpar);
         btnbuton_Salvar = findViewById(R.id.button_Salvar);
         btnbuton_Finalizar = findViewById(R.id.button_Finalizar);
+        btn_calcular = findViewById(R.id.button_Calcular);
 
         edit_Peso.setText(outraCalculadora.getPeso());
         edit_Altura.setText(outraCalculadora.getAltura());
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
                 outraCalculadora.setPeso(edit_Peso.getText().toString());
                 outraCalculadora.setAltura(edit_Altura.getText().toString());
+                outraCalculadora.setResultado(text_Resultado.getText().toString());
 
 
                 Toast.makeText(MainActivity.this, " Salvo ", Toast.LENGTH_SHORT).show();
@@ -85,11 +87,30 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        btn_calcular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcularImc(v);
+            }
+        });
+
+    }
+
+    public void calcularImc(View view){
+        double peso = Double.parseDouble(edit_Peso.getText().toString());
+        double altura = Double.parseDouble(edit_Altura.getText().toString());
+        double resultado = (peso / (altura * altura));
+
+        if(resultado < 19){
+            text_Resultado.setText((String.format("Abaixo do peso %.2f", resultado)));
+
+        } else if (resultado < 30){
+            text_Resultado.setText((String.format("Peso normal %.2f", resultado)));
 
 
-
-        Log.i("ProgramacaoPOO", outraCalculadora.toString());
-
+        } else if (resultado < 40) {
+            text_Resultado.setText((String.format("Sobrepeso %.2f", resultado)));
+        }
     }
 
 }
